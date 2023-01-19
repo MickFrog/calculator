@@ -31,6 +31,13 @@ body {
     border-radius: 10px;
 }
 
+#screen {
+    width: inherit;
+    height: 120px;
+    background: #C3F3C0;
+    border-radius: 10px 10px 0px 0px;
+}
+
 .footer {
     display: flex;
     justify-content: center;
