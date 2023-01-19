@@ -73,6 +73,10 @@ body {
     font-size: 1.5em;
 }
 
+.Keys .red {
+    color: #FF3366;
+}
+
 .footer {
     display: flex;
     justify-content: center;
