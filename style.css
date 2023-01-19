@@ -77,6 +77,10 @@ body {
     color: #FF3366;
 }
 
+.Keys .operate:hover{
+    background: #FF3366;
+}
+
 .footer {
     display: flex;
     justify-content: center;
