@@ -18,6 +18,17 @@ body {
 .content {
     display: flex;
     flex: 1 0 auto ;
+    justify-content: center;
+    align-items: center;
+}
+
+/* content items */
+.calc {
+    background: black;
+    width: 500px;
+    height: 600px;
+    padding: 0px;
+    border-radius: 10px;
 }
 
 .footer {
