@@ -19,7 +19,6 @@ body {
     display: flex;
     flex: 1 0 auto ;
     justify-content: center;
-    align-items: center;
 }
 
 /* content items */
@@ -29,6 +28,7 @@ body {
     height: 520px;
     padding: 0px;
     border-radius: 10px;
+    margin-top: 80px;
 }
 
 #screen {
