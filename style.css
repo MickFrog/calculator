@@ -4,6 +4,7 @@ body {
     min-height: 100vh;
     background: #191716;
     margin: 0px; padding: 0px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -25,4 +26,5 @@ body {
     margin-top: auto;
     background: #C3F3C0;
     padding: 10px;
+    font-weight: 550;
 }
