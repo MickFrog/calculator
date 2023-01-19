@@ -64,6 +64,10 @@ body {
     border-radius: 50%;
 }
 
+.Keys button:hover {
+    background: grey;
+}
+
 #equals {
     width: 42%;
     border-radius: 30px;
