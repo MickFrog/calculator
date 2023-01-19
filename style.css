@@ -5,3 +5,16 @@ body {
     background: #191716;
     margin: 0px; padding: 0px;
 }
+
+.content {
+    display: flex;
+    flex: 1 0 auto ;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    background: #C3F3C0;
+    padding: 10px;
+}
