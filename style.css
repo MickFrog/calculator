@@ -73,12 +73,20 @@ body {
     border-radius: 30px;
 }
 
+#equals:hover {
+    background: #ACC12F;
+}
+
 #bkSpace {
     font-size: 1.5em;
 }
 
 .Keys .red {
     color: #FF3366;
+}
+
+.Keys .red:hover {
+    background: #F5B700;
 }
 
 .Keys .operate:hover{
