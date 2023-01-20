@@ -96,8 +96,15 @@ eqButton.addEventListener('click', () => {
     a = operate(operand, a, b);
 
     //display answer
-    if(a > 10000000) {
+    if(a > 10000000) { //to curb very large numbers
         a = a.toExponential(2);
+        lowerScreen.textContent = a;
+    } else {
+        lowerScreen.textContent = a;
+    }
+
+    if(a < 0) {
+        a = '\u202A' + a + '\u202C';
         lowerScreen.textContent = a;
     } else {
         lowerScreen.textContent = a;
