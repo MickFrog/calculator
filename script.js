@@ -5,6 +5,7 @@ const operandButtons = [...document.querySelectorAll(".operate")];
 let upperScreen = document.getElementById("upScreen");
 const eqButton = document.getElementById("equals");
 const eraseButton = document.getElementById("bkSpace");
+const clearButton = document.getElementById("Clear");
 
 //global operation values
 let operand = "";
@@ -102,6 +103,14 @@ eraseButton.addEventListener('click', () => {
 
     //remove last element in input
     lowerScreen.textContent = lowerScreen.textContent.slice(0,-1); 
+});
+
+clearButton.addEventListener('click', () => {
+    upperScreen.textContent = 0;
+    lowerScreen.textContent = "";
+    a = null;
+    b = null;
+    operand = "";
 });
 
 //Driver functions
