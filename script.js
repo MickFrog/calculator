@@ -2,14 +2,21 @@
 const numButtons = [...document.querySelectorAll(".num")];
 //get lower screen
 let lowerScreen = document.getElementById("downScreen");
+//get operand buttons
+const operandButtons = [...document.querySelectorAll(".operate")];
 
-function addNumFunc(NumList) {
+function addNumDisplay(NumList) { //Adds display of number to screen
     NumList.forEach(element => {
         element.addEventListener('click', () => {
             if(lowerScreen.textContent.length >= 16) return;
+
             lowerScreen.textContent += element.id;
         });
     });
+}
+
+function addOperateDisplay(operateList) { //Adds display of operation symbols to screen
+
 }
 
 function add(a, b) {
@@ -45,4 +52,4 @@ function operate(operand, a, b) {
 }
 
 //Driver functions
-addNumFunc(numButtons);
+addNumDisplay(numButtons);
