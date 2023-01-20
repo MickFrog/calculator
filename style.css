@@ -32,10 +32,25 @@ body {
 }
 
 #screen {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
     width: inherit;
     height: 120px;
     background: #C5E6A6;
     border-radius: 10px 10px 0px 0px;
+}
+
+#screen div {
+    height: inherit/2;
+    padding: 10px;
+    background: transparent;
+    font-size: 2.4em;
+    direction: rtl;
+}
+
+#screen #upScreen {
+    font-size: 1.8em;
 }
 
 .Keys {
