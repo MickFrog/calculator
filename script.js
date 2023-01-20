@@ -25,10 +25,13 @@ function addNumDisplay(NumList) { //Adds display of number to screen
 function addOperandFunc(operateList) { //Adds display of operation symbols to screen
     operateList.forEach(element => {
         element.addEventListener('click', () => {
+            //lower screen input without unicode characters to fix direction with point
+            let lowerScreenIn = lowerScreen.textContent.replace(/[^\x00-\x7F]/g, "");
+
             if(a == null) { // there is no first element initially
                 if(lowerScreen.textContent == "") return; // no inout in lower screen
 
-                a = parseFloat(lowerScreen.textContent);
+                a = parseFloat(lowerScreenIn);
                 operand = element.id;
                 upperScreen.textContent = (a + " " + operand);
                 lowerScreen.textContent = "";
@@ -41,7 +44,7 @@ function addOperandFunc(operateList) { //Adds display of operation symbols to sc
                 return;
             }
 
-            b = parseFloat(lowerScreen.textContent);
+            b = parseFloat(lowerScreenIn);
             a = operate(operand, a, b);
             operand = element.id;
             upperScreen.textContent = (a + " " + operand);
@@ -117,7 +120,8 @@ clearButton.addEventListener('click', () => {
 decimalButton.addEventListener('click', () => {
     if(lowerScreen.textContent.includes(".")) return;
 
-    lowerScreen.textContent += decimalButton.textContent;
+    //the added unicode escape characters need to removed during parsing to float.
+    lowerScreen.textContent += '\u202A.\u202C';
 });
 
 //Driver functions
