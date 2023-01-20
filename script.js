@@ -99,16 +99,14 @@ eqButton.addEventListener('click', () => {
     if(a > 10000000) { //to curb very large numbers
         a = a.toExponential(2);
         lowerScreen.textContent = a;
-    } else {
-        lowerScreen.textContent = a;
-    }
+    } 
 
-    if(a < 0) {
+    if(a < 0) { //fix display of negative numbers with embedded direction xters.
         a = '\u202A' + a + '\u202C';
         lowerScreen.textContent = a;
-    } else {
-        lowerScreen.textContent = a;
-    }
+    } 
+
+    lowerScreen.textContent = a;
     
     //reset values
     upperScreen.textContent = 0;
