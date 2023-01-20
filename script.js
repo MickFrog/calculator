@@ -19,7 +19,7 @@ function addNumDisplay(NumList) { //Adds display of number to screen
     });
 }
 
-function addOperandDisplay(operateList) { //Adds display of operation symbols to screen
+function addOperandFunc(operateList) { //Adds display of operation symbols to screen
     operateList.forEach(element => {
         element.addEventListener('click', () => {
             if(a == null) { // there is no first element initially
@@ -79,6 +79,23 @@ function operate(operand, a, b) {
     }
 }
 
+//Add additional event listeners
+eqButton.addEventListener('click', () => {
+    //No input or no second operand
+    if(lowerScreen.textContent == "" || a == null) return;
+
+    //perform calculation
+    b = parseFloat(lowerScreen.textContent);
+    a = operate(operand, a, b);
+
+    //display answer
+    lowerScreen.textContent = a;
+    
+    //reset values
+    upperScreen.textContent = 0;
+    a = null; b = null;
+});
+
 //Driver functions
 addNumDisplay(numButtons);
-addOperandDisplay(operandButtons);
+addOperandFunc(operandButtons);
