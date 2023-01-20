@@ -48,7 +48,7 @@ function addOperandFunc(operateList) { //Adds display of operation symbols to sc
             b = parseFloat(lowerScreenIn);
             a = operate(operand, a, b);
             operand = element.id;
-            upperScreen.textContent = (a + " " + operand);
+
             lowerScreen.textContent = "";
         });
     });
@@ -96,7 +96,12 @@ eqButton.addEventListener('click', () => {
     a = operate(operand, a, b);
 
     //display answer
-    lowerScreen.textContent = a;
+    if(a > 10000000) {
+        a = a.toExponential(2);
+        lowerScreen.textContent = a;
+    } else {
+        lowerScreen.textContent = a;
+    }
     
     //reset values
     upperScreen.textContent = 0;
@@ -130,7 +135,7 @@ percentButton.addEventListener('click', () => {
 
     let lowerScreenIn = lowerScreen.textContent.replace(/[^\x00-\x7F]/g, "");
     lowerScreen.textContent = parseFloat(lowerScreenIn/100);
-    
+
 });
 
 //Driver functions
