@@ -30,7 +30,7 @@ function addOperandFunc(operateList) { //Adds display of operation symbols to sc
             let lowerScreenIn = lowerScreen.textContent.replace(/[^\x00-\x7F]/g, "");
 
             if(a == null) { // there is no first element initially
-                if(lowerScreen.textContent == "") return; // no inout in lower screen
+                if(lowerScreen.textContent == "") return; // no input in lower screen
 
                 a = parseFloat(lowerScreenIn);
                 operand = element.id;
@@ -48,7 +48,7 @@ function addOperandFunc(operateList) { //Adds display of operation symbols to sc
             b = parseFloat(lowerScreenIn);
             a = operate(operand, a, b);
             operand = element.id;
-
+            upperScreen.textContent = (a + " " + operand);
             lowerScreen.textContent = "";
         });
     });
