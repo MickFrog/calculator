@@ -6,6 +6,7 @@ let upperScreen = document.getElementById("upScreen");
 const eqButton = document.getElementById("equals");
 const eraseButton = document.getElementById("bkSpace");
 const clearButton = document.getElementById("Clear");
+const decimalButton = document.getElementById("point");
 
 //global operation values
 let operand = "";
@@ -111,6 +112,12 @@ clearButton.addEventListener('click', () => {
     a = null;
     b = null;
     operand = "";
+});
+
+decimalButton.addEventListener('click', () => {
+    if(lowerScreen.textContent.includes(".")) return;
+
+    lowerScreen.textContent += decimalButton.textContent;
 });
 
 //Driver functions
