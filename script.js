@@ -1,3 +1,8 @@
+//get number buttons
+const numButtons = [...document.querySelectorAll(".num")];
+//get lower screen
+let lowerScreen = document.getElementById("downScreen");
+
 function add(a, b) {
     return parseFloat((a+b).toFixed(1));
 }
