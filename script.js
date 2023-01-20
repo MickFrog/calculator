@@ -24,15 +24,28 @@ function addNumDisplay(NumList) { //Adds display of number to screen
 function addOperandDisplay(operateList) { //Adds display of operation symbols to screen
     operateList.forEach(element => {
         element.addEventListener('click', () => {
-            if(a == null) {
-                a = lowerScreen.textContent;
-                operand = element.textContent;
-                upperScreen.textContent += a;
+            if(a == null) { // there is no first element initially
+                if(lowerScreen.textContent == "") return;
+                a = parseFloat(lowerScreen.textContent);
+                operand = element.id;
+                upperScreen.textContent = (a + " " + operand);
+                lowerScreen.textContent = "";
+                return;
             }
 
-            upperScreen.textContent += element.textContent;
-        })
-    })
+            if(lowerScreen.textContent == "") { //if user wants to change operand sign without providing a new number
+                operand = element.id;
+                upperScreen.textContent = (a + " " + operand);
+                return;
+            }
+
+            b = parseFloat(lowerScreen.textContent);
+            a = operate(operand, a, b);
+            operand = element.id;
+            upperScreen.textContent = (a + " " + operand);
+            lowerScreen.textContent = "";
+        });
+    });
 }
 
 function add(a, b) {
@@ -69,3 +82,4 @@ function operate(operand, a, b) {
 
 //Driver functions
 addNumDisplay(numButtons);
+addOperandDisplay(operandButtons);
