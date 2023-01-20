@@ -42,7 +42,7 @@ body {
 }
 
 #screen div {
-    height: inherit/2;
+    height: auto;
     padding: 10px;
     background: transparent;
     font-size: 2.4em;
