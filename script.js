@@ -7,6 +7,7 @@ const eqButton = document.getElementById("equals");
 const eraseButton = document.getElementById("bkSpace");
 const clearButton = document.getElementById("Clear");
 const decimalButton = document.getElementById("point");
+const percentButton = document.getElementById("percent");
 
 //global operation values
 let operand = "";
@@ -122,6 +123,14 @@ decimalButton.addEventListener('click', () => {
 
     //the added unicode escape characters need to removed during parsing to float.
     lowerScreen.textContent += '\u202A.\u202C';
+});
+
+percentButton.addEventListener('click', () => {
+    if(lowerScreen.textContent == "") return;
+
+    let lowerScreenIn = lowerScreen.textContent.replace(/[^\x00-\x7F]/g, "");
+    lowerScreen.textContent = parseFloat(lowerScreenIn/100);
+    
 });
 
 //Driver functions
