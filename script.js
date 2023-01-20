@@ -1,11 +1,9 @@
-//get number buttons
+//get html elements
 const numButtons = [...document.querySelectorAll(".num")];
-//get lower screen
 let lowerScreen = document.getElementById("downScreen");
-//get operand buttons
 const operandButtons = [...document.querySelectorAll(".operate")];
-//get upper screen
 let upperScreen = document.getElementById("upScreen");
+const eqButton = document.getElementById("equals");
 
 //global operation values
 let operand = "";
@@ -25,7 +23,8 @@ function addOperandDisplay(operateList) { //Adds display of operation symbols to
     operateList.forEach(element => {
         element.addEventListener('click', () => {
             if(a == null) { // there is no first element initially
-                if(lowerScreen.textContent == "") return;
+                if(lowerScreen.textContent == "") return; // no inout in lower screen
+
                 a = parseFloat(lowerScreen.textContent);
                 operand = element.id;
                 upperScreen.textContent = (a + " " + operand);
