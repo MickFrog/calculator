@@ -51,6 +51,7 @@ body {
 
 #screen #upScreen {
     font-size: 1.8em;
+    direction: ltr;
 }
 
 .Keys {
