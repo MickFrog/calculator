@@ -6,7 +6,7 @@ let lowerScreen = document.getElementById("downScreen");
 function addNumFunc(NumList) {
     NumList.forEach(element => {
         element.addEventListener('click', () => {
-            lowerScreen.textContent = element.id;
+            lowerScreen.textContent += element.id;
         });
     });
 }
