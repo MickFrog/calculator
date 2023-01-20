@@ -9,15 +9,20 @@ function addNumDisplay(NumList) { //Adds display of number to screen
     NumList.forEach(element => {
         element.addEventListener('click', () => {
             if(lowerScreen.textContent.length >= 16) return;
-
-            lowerScreen.textContent += element.id;
+            lowerScreen.textContent += element.textContent;
         });
     });
 }
 
-function addOperateDisplay(operateList) { //Adds display of operation symbols to screen
+// function addOperandDisplay(operateList) { //Adds display of operation symbols to screen
+//     operateList.forEach(element => {
+//         element.addEventListener('click', () => {
+//             if(lowerScreen.textContent.length >= 16) return;
 
-}
+//             lowerScreen.textContent += element.textContent;
+//         })
+//     })
+// }
 
 function add(a, b) {
     return parseFloat((a+b).toFixed(1));
