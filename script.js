@@ -91,8 +91,11 @@ eqButton.addEventListener('click', () => {
     //No input or no second operand
     if(lowerScreen.textContent == "" || a == null) return;
 
+    //lower screen input without unicode characters to fix direction with point
+    let lowerScreenIn = lowerScreen.textContent.replace(/[^\x00-\x7F]/g, "");
+
     //perform calculation
-    b = parseFloat(lowerScreen.textContent);
+    b = parseFloat(lowerScreenIn);
     a = operate(operand, a, b);
 
     //display answer
