@@ -1,120 +1,125 @@
+:root {
+  --bigFont: calc(2vmin + 30px);
+}
+
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background: #191716;
-    margin: 0px; padding: 0px;
-    font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #191716;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .header {
-    display: flex;
-    justify-content: center;
-    color: #C3F3C0;
-    font-size: 3.2em;
-    padding: 10px;
+  display: flex;
+  justify-content: center;
+  color: #c3f3c0;
+  font-size: var(--bigFont);
+  padding: 10px;
 }
 
 .content {
-    display: flex;
-    flex: 1 0 auto ;
-    justify-content: center;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
 }
 
 /* content items */
 .calc {
-    background: black;
-    width: 400px;
-    height: 520px;
-    padding: 0px;
-    border-radius: 10px;
-    margin-top: 80px;
+  background: black;
+  width: 400px;
+  height: 520px;
+  padding: 0px;
+  border-radius: 10px;
+  margin-top: 80px;
 }
 
 #screen {
-    display: flex;
-    flex-direction: column;
-    padding: 0px;
-    width: inherit;
-    height: 120px;
-    background: #C5E6A6;
-    border-radius: 10px 10px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  width: inherit;
+  height: 120px;
+  background: #c5e6a6;
+  border-radius: 10px 10px 0px 0px;
 }
 
 #screen div {
-    height: auto;
-    padding: 10px;
-    background: transparent;
-    font-size: 2.4em;
-    direction: rtl;
+  height: auto;
+  padding: 10px;
+  background: transparent;
+  font-size: 2.4em;
+  direction: rtl;
 }
 
 #screen #upScreen {
-    font-size: 1.8em;
-    direction: ltr;
+  font-size: 1.8em;
+  direction: ltr;
 }
 
 .Keys {
-    display: flex;
-    flex-direction: column;
-    width: inherit;
-    height: inherit;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
 }
 
 .Keys div {
-    display: flex;
-    justify-content: space-around;
-    width: inherit;
+  display: flex;
+  justify-content: space-around;
+  width: inherit;
 }
 
 .Keys button {
-    font-family: 'Montserrat', sans-serif;
-    background: #373F47;
-    font-size: 2em;
-    font-weight: 700;
-    color: #C3F3C0;
-    margin: 10px;
-    padding: 10px;
-    width: 70px;
-    height: 60px;
-    border: 0px;
-    border-radius: 50%;
+  font-family: "Montserrat", sans-serif;
+  background: #373f47;
+  font-size: 2em;
+  font-weight: 700;
+  color: #c3f3c0;
+  margin: 10px;
+  padding: 10px;
+  width: 70px;
+  height: 60px;
+  border: 0px;
+  border-radius: 50%;
 }
 
 .Keys button:hover {
-    background: grey;
+  background: grey;
 }
 
 #equals {
-    width: 42%;
-    border-radius: 30px;
+  width: 42%;
+  border-radius: 30px;
 }
 
 #equals:hover {
-    background: #3185FC;
+  background: #3185fc;
 }
 
 #bkSpace {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .Keys .red {
-    color: #FF3366;
+  color: #ff3366;
 }
 
 .Keys .red:hover {
-    background: #F5B700;
+  background: #f5b700;
 }
 
-.Keys .operate:hover{
-    background: #FF3366;
+.Keys .operate:hover {
+  background: #ff3366;
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
-    margin-top: auto;
-    background: #C3F3C0;
-    padding: 10px;
-    font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  background: #c3f3c0;
+  padding: 10px;
+  font-weight: 700;
 }
