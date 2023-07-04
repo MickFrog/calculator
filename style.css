@@ -1,5 +1,10 @@
 :root {
-  --bigFont: calc(2vmin + 30px);
+  --bigFont: calc(5vmin + 15px);
+  --buttonFont: calc(2vmin + 15px);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -24,23 +29,23 @@ body {
   display: flex;
   flex: 1 0 auto;
   justify-content: center;
+  margin: 0px 18px;
+  margin-bottom: 24px;
 }
 
 /* content items */
 .calc {
   background: black;
-  width: 400px;
-  height: 520px;
-  padding: 0px;
+  height: max-content;
   border-radius: 10px;
-  margin-top: 80px;
+  width: max-content;
+  margin-top: 5%;
 }
 
 #screen {
   display: flex;
   flex-direction: column;
   padding: 0px;
-  width: inherit;
   height: 120px;
   background: #c5e6a6;
   border-radius: 10px 10px 0px 0px;
@@ -60,30 +65,34 @@ body {
 }
 
 .Keys {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
   width: inherit;
-  height: inherit;
+  padding: 8px;
+  gap: 10px;
 }
 
-.Keys div {
-  display: flex;
-  justify-content: space-around;
-  width: inherit;
+.calc-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
 }
 
-.Keys button {
+.calc-row > button {
   font-family: "Montserrat", sans-serif;
   background: #373f47;
-  font-size: 2em;
+  font-size: var(--buttonFont);
   font-weight: 700;
   color: #c3f3c0;
-  margin: 10px;
   padding: 10px;
-  width: 70px;
-  height: 60px;
+  height: max(40px, 100%);
+  width: max(40px, 90%);
   border: 0px;
   border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Keys button:hover {
@@ -91,8 +100,10 @@ body {
 }
 
 #equals {
-  width: 42%;
+  width: inherit;
   border-radius: 30px;
+
+  grid-column: 3 / 5;
 }
 
 #equals:hover {
@@ -122,4 +133,14 @@ body {
   background: #c3f3c0;
   padding: 10px;
   font-weight: 700;
+}
+
+@media (min-width: 700px) {
+  .calc {
+    width: 420px;
+  }
+
+  .Keys {
+    height: 400px;
+  }
 }
